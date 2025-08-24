@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#game {
+    background-color: #14202ef8;
+    padding: 45px;
+    border-radius: 4px;
+    text-align: center;
+    height: 350px;
+    width: 500px;
+    position: relative;
+}
+
+#game::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 94%;
+    border: 2px solid rgba(98, 192, 255, 0.075); 
+    border-radius: inherit; 
+    box-sizing: border-box; 
+}
+
+#title-container {
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#game-title {
+    font-size: 30px;
+    color: #08b8cf;
+    text-shadow: 0 0 4vh #08b8cf;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#game-title .fa-gamepad {
+    margin-right: 10px; /* Adjust the value as needed for desired spacing */
+}
+
+#game-title::before,
+#game-title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#game-title::before {
+    width: 80%;
+    height: 1px;
+    bottom: -6px;
+    background: linear-gradient(
+        350deg,
+        rgba(234, 249, 250, 0.082) 7%,
+        rgba(255, 255, 255, 0.795) 50%,
+        rgba(234, 249, 250, 0.082) 96%
+    );
+    text-shadow: 0 0 2vh #dddddd;
+}
+
+#game-title::after {
+    width: 40%;
+    height: 3px;
+    bottom: -7px; 
+    background-color: #08b8cf;
+    text-shadow: 0 0 4vh #08b8cf;
+}
+
+#container {
+    padding: 10px;
+    background: radial-gradient(99.44% 99.44% at 45% 40%, #17385d3f , #17385d3d);
+    border-radius: 2px;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: 80%;
+}
+
+#message-container {
+    width: 100%;
+    text-align: center;
+}
+
+#game-message {
+    font-size: 17px;
+    font-weight: bold;
+    color: #c2c2c2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-message i {
+    font-size: 24px;
+    color: #5bc0be;
+}
+
+#game-message span {
+    color: #c2c2c2;
+}
+
+#additional-text {
+    color: #b5b5b5;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#guessing-game {
+    margin-top: 20px;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#user-guess {
+    padding: 10px;
+    font-size: 16px;
+    border: none; 
+    width: calc(100% - 22px);
+    color: #ffffff; 
+    border-radius: 2px;
+    background-color: #0f0f0a52; 
+    outline: none; 
+}
+
+#user-guess::-webkit-outer-spin-button,
+#user-guess::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#user-guess[type=number] {
+    -moz-appearance: textfield;
+}
+
+.feedback-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 24px; 
+}
+
+.submit-button {
+    padding: 10px 90px;
+    font-size: 16px;
+    background-color: #39024a;
+    border-radius: 2px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 0px; 
+}
+
+.close-button {
+    padding: 10px 95px;
+    font-size: 16px;
+    background-color: #ad3737;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 0px; 
+}
+
+.submit-button:hover {
+    background-color: #300348;
+}
+
+.close-button:hover {
+    background-color: #902121f8;
+}
+
+#timer-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#timer-bar {
+    width: 100%;
+    background-color: #444;
+    border-radius: 0 0 4px 4px; 
+    overflow: hidden;
+    height: 9px; 
+}
+
+#timer-progress {
+    height: 100%;
+    background-color: #08b8cf;
+    width: 100%; 
+    transition: width 1s linear;
+}
+
+#end-game-message {
+    margin-top: 20px;
+}
+
+#end-game-message p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff; 
+}
+
+#win-message,
+#fail-message {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#win-message {
+    background-color: #388e3c;
+}
+
+#fail-message {
+    background-color: #d32f2f; 
+}
+
+input::placeholder {
+    color: #ffffff; 
+}

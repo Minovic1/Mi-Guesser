@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guesser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game" style="display: none;">
+        <div id="title-container">
+            <p id="game-title">
+                <i class="fa fa-gamepad" style="font-size:35px;color:rgb(145, 145, 145);margin-right: 10px;"></i>
+                <span class="title-text"> Number Guesser</span>
+            </p>
+        </div>
+        
+        <div id="container">
+            <div id="message-container">
+                <p id="game-message">
+                     <span>Try to guess the correct number!</span>
+                </p>
+            </div>
+            <div id="guessing-game">
+                <div class="input-container">
+                    <input type="number" id="user-guess" placeholder="Your guess" disabled>
+                    <span id="feedback-icon" class="feedback-icon material-icons"></span>
+                </div>
+                <button id="submit-button" class="submit-button" onclick="submitGuess()">Submit</button>
+                <button id="close-button" class="close-button" onclick="closeGame()">Close</button>
+            </div>
+        </div>
+        <div id="timer-container">
+            <div id="timer-bar">
+                <div id="timer-progress"></div>
+            </div>
+        </div>
+        <div id="end-game-message" style="display: none;">
+            <p id="end-message-text"></p>
+        </div>
+        <div id="win-message" class="success" style="display: none;">
+            <p>Success!</p>
+        </div>
+        <div id="fail-message" class="fail" style="display: none;">
+            <p>Failed!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
